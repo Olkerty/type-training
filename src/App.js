@@ -29,7 +29,7 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <TypeTrainer arrayOfTexts={['asda', 'asdws', 'yqeb']} setRecords={setRecords} records={records} />
+      <TypeTrainer arrayOfTexts={arrayOfTexts} setRecords={setRecords} records={records} />
       <div className='tableofrecords'>
         <h2>
           Table of Records
