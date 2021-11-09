@@ -10,7 +10,7 @@ let timerId;
 let currentChar;
 
 
-export const TypeTrainer = React.memo(({ arrayOfTexts }) => {
+export const TypeTrainer = React.memo(({ arrayOfTexts, setRecords, records }) => {
 	const [wrongCounter, setWrongCounter] = useState(0);
 	const [rightCounter, setRightCounter] = useState(0);
 	const [timer, setTimer] = useState(0);
@@ -31,10 +31,17 @@ export const TypeTrainer = React.memo(({ arrayOfTexts }) => {
 				currentChar.classList.remove(styles.wrongChar);
 				if (currentChar.nextElementSibling == null) {
 					alert('YOU DONE WELL!');
-					clearInterval(timerId);
-					currentChar.classList.remove(styles.rightChar);
-					currentChar.classList.remove(styles.wrongChar);
-					window.removeEventListener('keydown', compareChars)
+					let newRecords = [...records, {
+						speed: (60 * (righc) / time),
+						accuracy: (100 * righc / (righc + wronc)).toFixed(2),
+					}];
+					setRecords(newRecords);
+					if (newRecords.length > 10) {
+						localStorage.setItem('records', JSON.stringify(newRecords.sort((a, b) => b.accuracy - a.accuracy).slice(0, 10)));
+					} else {
+						localStorage.setItem('records', JSON.stringify(newRecords));
+					}
+					restartGame();
 					return;
 				}
 				currentChar = currentChar.nextElementSibling;
@@ -74,7 +81,6 @@ export const TypeTrainer = React.memo(({ arrayOfTexts }) => {
 		<div className={styles.TypeTrainer}>
 			<div className='text-container'>
 				{text.split('').map(function (char) {
-					console.log(char);
 					return (
 						<span className={styles.char}>
 							{char}
@@ -90,7 +96,7 @@ export const TypeTrainer = React.memo(({ arrayOfTexts }) => {
 						100}%
 				</div>
 				<div>
-					<img src="https://img.icons8.com/ios/50/000000/clock--v3.png" className={styles.smallPicture} />	Speed {(60 * (rightCounter) / timer) ?
+					<img src="https://img.icons8.com/ios/50/000000/clock--v3.png" className={styles.smallPicture} />	Speed: {(60 * (rightCounter) / timer) ?
 						(60 * (rightCounter) / timer).toFixed(2)
 						: 0} signs per minute
 				</div>
