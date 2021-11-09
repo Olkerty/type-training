@@ -25,8 +25,6 @@ function App() {
     fetchText();
     if (localStorage.getItem('records')) {
       setRecords(JSON.parse(localStorage.records));
-      //localStorage.getItem('records')
-      console.log(JSON.parse(localStorage.records));
     }
   }, []);
   return (
