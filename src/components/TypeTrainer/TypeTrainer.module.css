@@ -1,0 +1,48 @@
+.TypeTrainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.ControlCotainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 150px;
+	min-height: 200px;
+	max-height: 300px;
+}
+
+.smallPicture {
+	width: 20px;
+	height: 20px;
+}
+
+.char {
+  min-width: 10px;
+  font-size: 21px;
+  line-height: 1.375;
+  border-radius: 5px;
+}
+
+@media all and (max-width: 600px) {
+	.char {
+		font-size: 14px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.char {
+		font-size: 10px;
+	}
+}
+
+
+.rightChar {
+  background-color: aquamarine;
+  color: green;
+}
+
+.wrongChar {
+  background-color: chocolate;
+  color: coral;
+}
