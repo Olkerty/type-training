@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/type-training/static/css/main.41200284.chunk.css",
+    "main.js": "/type-training/static/js/main.f334f676.chunk.js",
+    "main.js.map": "/type-training/static/js/main.f334f676.chunk.js.map",
+    "runtime-main.js": "/type-training/static/js/runtime-main.9fc601e1.js",
+    "runtime-main.js.map": "/type-training/static/js/runtime-main.9fc601e1.js.map",
+    "static/js/2.212238d9.chunk.js": "/type-training/static/js/2.212238d9.chunk.js",
+    "static/js/2.212238d9.chunk.js.map": "/type-training/static/js/2.212238d9.chunk.js.map",
+    "static/js/3.ab359736.chunk.js": "/type-training/static/js/3.ab359736.chunk.js",
+    "static/js/3.ab359736.chunk.js.map": "/type-training/static/js/3.ab359736.chunk.js.map",
+    "index.html": "/type-training/index.html",
+    "static/css/main.41200284.chunk.css.map": "/type-training/static/css/main.41200284.chunk.css.map",
+    "static/js/2.212238d9.chunk.js.LICENSE.txt": "/type-training/static/js/2.212238d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fc601e1.js",
+    "static/js/2.212238d9.chunk.js",
+    "static/css/main.41200284.chunk.css",
+    "static/js/main.f334f676.chunk.js"
+  ]
+}
